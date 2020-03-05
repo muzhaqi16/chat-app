@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "rbx/index.css";
-import { Navbar, Button } from 'rbx';
+import { Navbar, Button, } from 'rbx';
 
 export default function Nav() {
     return (

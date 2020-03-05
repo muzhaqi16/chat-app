@@ -55,6 +55,12 @@ class FirebaseService {
 	getAllMessages() {
 		return this.database.ref(`messages`);
 	}
+	addMessage(id, message) {
+		let userMessages = this.database.ref(`users/${id}/message`);
+		return userMessages.set({
+			message: { message }
+		})
+	}
 }
 
 export default FirebaseService;
