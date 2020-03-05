@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build directory / files
+dist/
+
+# IDE files / Workspace
+.idea/
+.idea/*
+.vscode/
+
+# Testing
+src/test/
+coverage/
+
+# Environment variables
+.env
+.envrc
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/*
+
+# Misc
+.DS_Store
