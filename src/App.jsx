@@ -9,13 +9,13 @@ import {
 } from "react-router-dom";
 
 import Nav from './components/Nav';
+import MainChat from './components/MainChat';
 
 const App = () => {
 	return (
 		//in order to use Link from react router we need to wrap it in <Router> tags
 		<Router>
 			<header>
-				<h1>Chat Application</h1>
 				<Nav />
 			</header>
 			<main>
@@ -29,7 +29,7 @@ const App = () => {
 						<h2>Sign Up</h2>
 					</Route>
 					<Route path="/">
-						<h2>Main Chat</h2>
+						<MainChat />
 					</Route>
 				</Switch>
 			</main>
