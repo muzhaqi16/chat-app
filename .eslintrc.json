@@ -1,0 +1,44 @@
+{
+	"env": {
+		"commonjs": true,
+		"jest": true,
+		"es6": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"eslint-config-react-app",
+		"eslint-config-prettier"
+	],
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 2018
+	},
+	"plugins": [
+		"eslint-plugin-prettier",
+		"eslint-plugin-react",
+		"eslint-plugin-react-hooks"
+	],
+	"rules": {
+		/* ESLint */
+		"comma-dangle": "off",
+		"max-classes-per-file": "off",
+		"no-console": "off",
+		"no-duplicate-imports": "error",
+		"no-empty": "warn",
+		"no-prototype-builtins": "off",
+		"no-return-await": "warn",
+		"no-shadow": "warn",
+		"no-useless-catch": "warn",
+		"no-unused-vars": "warn",
+		"sort-keys": "off",
+
+		/* Prettier */
+		"prettier/prettier": "warn"
+	}
+}
