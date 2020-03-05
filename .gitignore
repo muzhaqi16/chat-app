@@ -7,7 +7,6 @@ dist/
 # IDE files / Workspace
 .idea/
 .idea/*
-.vscode/
 
 # Testing
 src/test/
