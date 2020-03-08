@@ -21,7 +21,6 @@ html {
     box-sizing: inherit;
 }
 
-
 body {
     background-color: ${colors.bg.light};
     color: ${colors.fg.main};

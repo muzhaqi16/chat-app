@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { GlobalStyles } from './theme';
-import AuthGateway from './routes/AuthGateway';
+import Login from './routes/Login';
 import ChatDashboard from './routes/ChatDashboard';
 
 const AppContainer = styled.div`
@@ -21,7 +21,7 @@ const App = () => {
 			{/* NavigationBar goes here */}
 			<BrowserRouter>
 				<Switch>
-					<Route path="/" exact component={AuthGateway} />
+					<Route path="/" exact component={Login} />
 					<Route path="/chat" exact component={ChatDashboard} />
 				</Switch>
 			</BrowserRouter>
