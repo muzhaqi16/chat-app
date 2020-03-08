@@ -40,5 +40,9 @@
 
 		/* Prettier */
 		"prettier/prettier": "warn"
+
+		/* React */
+
+		/* React Hooks */
 	}
 }
