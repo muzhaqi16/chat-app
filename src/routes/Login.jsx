@@ -74,13 +74,11 @@ const Login = () => {
 						/>
 					</div>
 					<div>
-						<button type="" onSubmit={handleSubmit}>
+						<button type="submit" onSubmit={handleSubmit}>
 							Submit
 						</button>
 					</div>
 				</form>
-
-				<pre>{JSON.stringify({ email, password }, null, 2)}</pre>
 			</FormWrapper>
 		</CenteredContainer>
 	);
