@@ -1,5 +1,7 @@
 import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLock, faEnvelope, faCheck, faUser, faAddressBook } from '@fortawesome/free-solid-svg-icons'
 
 import FirebaseContext from '../context/FirebaseContext';
 
@@ -48,35 +50,67 @@ const Login = () => {
 	return (
 		<CenteredContainer>
 			<FormWrapper>
+				<h4 class="title is-4">
+					Welcome to ChaT app
+      			</h4>
 				<form autoComplete="off" onSubmit={handleSubmit}>
-					<header>Login to Chat App</header>
-					<div>
-						<label>Email</label>
-						<input
-							autoFocus
-							id="email"
-							type="email"
-							name="email"
-							onChange={handleEmailChange}
-							value={email}
-							required
-						/>
+					<div class="tabs is-boxed">
+						<ul>
+							<li class="is-active">
+								<a>
+									<span class="icon is-small"><FontAwesomeIcon icon={faUser} aria-hidden="true" /></span>
+									<span>Login</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<span class="icon is-small"><FontAwesomeIcon icon={faAddressBook} aria-hidden="true" /></span>
+									<span>Register</span>
+								</a>
+							</li>
+						</ul>
 					</div>
-					<div>
-						<label>Password</label>
-						<input
-							id="password"
-							name="password"
-							type="password"
-							onChange={handlePasswordChange}
-							value={password}
-							required
-						/>
+					<div class="field">
+						<label class="label">Email</label>
+						<div class="control has-icons-left has-icons-right">
+							<input className="input"
+								type="email"
+								placeholder="Email"
+								autoFocus
+								onChange={handleEmailChange}
+								value={email}
+								required />
+							<span class="icon is-small is-left">
+								<FontAwesomeIcon icon={faEnvelope} />
+							</span>
+							<span class="icon is-small is-right">
+								<FontAwesomeIcon icon={faCheck} />
+							</span>
+						</div>
+						<p class="help is-danger">This email is invalid</p>
 					</div>
-					<div>
-						<button type="submit" onSubmit={handleSubmit}>
-							Submit
-						</button>
+					<div class="field">
+						<div class="control has-icons-left">
+							<input className="input" id="password"
+								name="password"
+								type="password"
+								placeholder="Password"
+								onChange={handlePasswordChange}
+								value={password}
+								required
+							/>
+							<span class="icon is-small is-left">
+								<FontAwesomeIcon icon={faLock} />
+							</span>
+						</div>
+					</div>
+					<div class="field is-grouped">
+						<div class="control">
+							<button type="submit" class="button is-success">Login</button>
+						</div>
+						<div class="control">
+							<button class="button is-danger is-light">Cancel</button>
+						</div>
 					</div>
 				</form>
 			</FormWrapper>
