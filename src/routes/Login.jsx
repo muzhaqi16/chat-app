@@ -50,29 +50,29 @@ const Login = () => {
 	return (
 		<CenteredContainer>
 			<FormWrapper>
-				<h4 class="title is-4">
+				<h4 className="title is-4">
 					Welcome to ChaT app
       			</h4>
 				<form autoComplete="off" onSubmit={handleSubmit}>
-					<div class="tabs is-boxed">
+					<div className="tabs is-boxed">
 						<ul>
-							<li class="is-active">
+							<li className="is-active">
 								<a href="/">
-									<span class="icon is-small"><FontAwesomeIcon icon={faUser} aria-hidden="true" /></span>
+									<span className="icon is-small"><FontAwesomeIcon icon={faUser} aria-hidden="true" /></span>
 									<span>Login</span>
 								</a>
 							</li>
 							<li>
 								<a href="/">
-									<span class="icon is-small"><FontAwesomeIcon icon={faAddressBook} aria-hidden="true" /></span>
+									<span className="icon is-small"><FontAwesomeIcon icon={faAddressBook} aria-hidden="true" /></span>
 									<span>Register</span>
 								</a>
 							</li>
 						</ul>
 					</div>
-					<div class="field">
-						<label class="label">Email</label>
-						<div class="control has-icons-left has-icons-right">
+					<div className="field">
+						<label className="label">Email</label>
+						<div className="control has-icons-left has-icons-right">
 							<input className="input"
 								type="email"
 								placeholder="Email"
@@ -80,17 +80,17 @@ const Login = () => {
 								onChange={handleEmailChange}
 								value={email}
 								required />
-							<span class="icon is-small is-left">
+							<span className="icon is-small is-left">
 								<FontAwesomeIcon icon={faEnvelope} />
 							</span>
-							<span class="icon is-small is-right">
+							<span className="icon is-small is-right">
 								<FontAwesomeIcon icon={faCheck} />
 							</span>
 						</div>
-						<p class="help is-danger">This email is invalid</p>
+						<p className="help is-danger">This email is invalid</p>
 					</div>
-					<div class="field">
-						<div class="control has-icons-left">
+					<div className="field">
+						<div className="control has-icons-left">
 							<input className="input" id="password"
 								name="password"
 								type="password"
@@ -99,17 +99,17 @@ const Login = () => {
 								value={password}
 								required
 							/>
-							<span class="icon is-small is-left">
+							<span className="icon is-small is-left">
 								<FontAwesomeIcon icon={faLock} />
 							</span>
 						</div>
 					</div>
-					<div class="field is-grouped">
-						<div class="control">
-							<button type="submit" class="button is-success">Login</button>
+					<div className="field is-grouped">
+						<div className="control">
+							<button type="submit" className="button is-success">Login</button>
 						</div>
-						<div class="control">
-							<button class="button is-danger is-light">Cancel</button>
+						<div className="control">
+							<button className="button is-danger is-light">Cancel</button>
 						</div>
 					</div>
 				</form>
