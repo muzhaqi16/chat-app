@@ -37,6 +37,7 @@ const Login = () => {
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
+		setError();
 		console.log(`Email: ${email} | Password: ${password}`);
 
 		try {
