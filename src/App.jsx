@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 import { GlobalStyles } from './theme';
 import Login from './routes/Login';

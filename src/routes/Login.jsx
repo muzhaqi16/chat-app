@@ -57,13 +57,13 @@ const Login = () => {
 					<div class="tabs is-boxed">
 						<ul>
 							<li class="is-active">
-								<a>
+								<a href="/">
 									<span class="icon is-small"><FontAwesomeIcon icon={faUser} aria-hidden="true" /></span>
 									<span>Login</span>
 								</a>
 							</li>
 							<li>
-								<a>
+								<a href="/">
 									<span class="icon is-small"><FontAwesomeIcon icon={faAddressBook} aria-hidden="true" /></span>
 									<span>Register</span>
 								</a>
