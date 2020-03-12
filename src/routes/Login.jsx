@@ -22,6 +22,7 @@ const FormWrapper = styled.div`
 
 const Login = () => {
 	const [email, setEmail] = useState('');
+	const [error, setError] = useState();
 	const [password, setPassword] = useState('');
 
 	const firebaseService = useContext(FirebaseContext);
@@ -39,8 +40,10 @@ const Login = () => {
 		console.log(`Email: ${email} | Password: ${password}`);
 
 		try {
-			await firebaseService.loginUser(email, password);
+			const result = await firebaseService.loginUser(email, password);
+			console.log(result);
 		} catch (err) {
+			setError(err.message);
 			console.error(err);
 		}
 		setEmail('');
@@ -87,7 +90,7 @@ const Login = () => {
 								<FontAwesomeIcon icon={faCheck} />
 							</span>
 						</div>
-						<p className="help is-danger">This email is invalid</p>
+						<p className="help is-danger is-hidden">This email is invalid</p>
 					</div>
 					<div className="field">
 						<div className="control has-icons-left">
@@ -103,6 +106,10 @@ const Login = () => {
 								<FontAwesomeIcon icon={faLock} />
 							</span>
 						</div>
+						<p className="help is-danger is-hidden">This password is invalid</p>
+					</div>
+					<div className="field">
+						<p className={"help is-danger" + ((error == undefined) ? " is-hidden" : "")}>{error}</p>
 					</div>
 					<div className="field is-grouped">
 						<div className="control">
@@ -111,6 +118,7 @@ const Login = () => {
 						<div className="control">
 							<button className="button is-danger is-light">Cancel</button>
 						</div>
+
 					</div>
 				</form>
 			</FormWrapper>
