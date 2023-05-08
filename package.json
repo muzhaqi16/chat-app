@@ -14,7 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "firebase": "^7.9.3",
-    "luxon": "^1.22.0",
+    "luxon": "^1.28.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
